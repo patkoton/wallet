@@ -7,7 +7,7 @@ import Transact from '../components/Transact'
 const Home = () => {
   return (
     <Layout>
-        <div>
+        <div className='home-div'>
             <Market />
             <Transact />
         </div>
