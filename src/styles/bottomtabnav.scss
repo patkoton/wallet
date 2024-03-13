@@ -25,19 +25,19 @@
     margin: 0;
 }
 
-.tab-links li a {
+.tab-links li .link {
     color: $silver;
     text-decoration: none;
     // padding: 0 5px;
 }
 
-.tab-links li.active {
+.tab-links li.active .link {
     color: $darkslategray;
 }
 
-.tab-links li a:hover {
+.tab-links li .link:hover {
     color: $darkslategray;
-}
+} 
 
 .tab-icon {
     font-size: 18px;

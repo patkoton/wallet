@@ -7,20 +7,20 @@ const Transact = () => {
   return (
     <div className='transact'>
       <div className='trct-col1'>
-        <div className=''>
+        <button className=''>
             <div className='bbtc-div'>
                 <div className='bbtc'><LiaDollarSignSolid className='btc-icon' /></div>
             </div>
             <span className='bbtc-text'>Buy BTC</span>
-        </div>
+        </button>
       </div>
       <div className='trct-col1'>
-        <div className=''>
+        <button className=''>
             <div className='bbtc-div'>
                 <div className='sbtc'><LiaDollarSignSolid className='btc-icon' /></div>
             </div>
             <span className='bbtc-text'>Sell BTC</span>
-        </div>
+        </button>
       </div>
     </div>
   )
