@@ -5,6 +5,7 @@
 * {
     box-sizing: border-box;
     max-width: 100%;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
@@ -261,11 +262,11 @@ body {
         border-radius: 0;
     }
 
-    .main {
-        padding: 40px 30px 90px 30px;
-    }
+    // .main {
+    //     padding: 42px 30px 92px 30px;
+    // }
 
-    .chart, .transact {
-        margin-top: 40px;
-    }
+    // .chart, .transact {
+    //     margin-top: 40px;
+    // }
 }
