@@ -1,0 +1,52 @@
+@import '_variables.scss';
+
+
+.bottom-tab-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: $white;
+    z-index: 1000;
+    border-radius: 0 0 30px 30px;
+  }
+  
+.tab-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 15px;
+    list-style-type: none;
+    margin: 0;
+}
+  
+.tab-links li {
+    margin: 0;
+}
+
+.tab-links li a {
+    color: $silver;
+    text-decoration: none;
+    // padding: 0 5px;
+}
+
+.tab-links li.active {
+    color: $darkslategray;
+}
+
+.tab-links li a:hover {
+    color: $darkslategray;
+}
+
+.tab-icon {
+    font-size: 18px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .bottom-tab-nav {
+        border-radius: 0;
+    }
+}
+  

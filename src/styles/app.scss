@@ -1,0 +1,176 @@
+
+@import '_variables.scss';
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: $lavender;
+}
+
+.app {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wallet {
+    width: 300px;
+    height: 500px;
+    background-color: $whitesmoke;
+    border-radius: 30px;
+    position: fixed;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+// Main
+.main {
+    padding: 20px 30px;
+}
+
+// Market
+.market {
+    width: 100%;
+    border-radius: 10px;
+    background-color: $white;
+    padding:20px 20px 10px 20px;
+}
+
+.mkt-row1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mkt-row2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btc, .bbtc, .sbtc {
+    width: 25px;
+    height: 25px;
+    background: linear-gradient(to bottom, $sandybrown, $darkorange);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btc-icon {
+    color: $white;
+}
+
+.btc-text, .btc-abb, .bbtc-text {
+    font-weight: 500;
+    font-size: 12px;
+    color: $darkslategray;
+}
+
+.btc-abb {
+    color: $darkgray;
+}
+
+.bit {
+    color: $darkslategray;
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.mkt-row3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.btc-amt {
+    color: $darkgray;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.btc-pct {
+    width: 50px;
+    height: 20px;
+    background-color: $crimson;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pct {
+    font-size: 10px;
+    font-weight: 400;
+    color: $white;
+}
+
+.mkt-row4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.down-icon {
+    font-size: 20px;
+    color: $darkgray;
+}
+
+
+// Transact
+.transact {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.trct-col1 {
+    width: 50%;
+    height: 80px;
+    background-color: $white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bbtc-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.bbtc {
+    background: linear-gradient(to bottom, $skyblue, $dodgerblue);
+}
+
+.bbtc-text {
+    text-align: center;
+}
+
+.sbtc {
+    background: linear-gradient(to bottom, $lightcoral, $deeppink);
+}
+
+@media only screen and (max-width: 600px) {
+    .wallet {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
