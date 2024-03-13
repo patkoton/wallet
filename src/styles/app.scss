@@ -1,16 +1,18 @@
 
 @import '_variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 * {
     box-sizing: border-box;
     max-width: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-optical-sizing: auto;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: $lavender;
+    background-color: $lavender;
 }
 
 .app {
@@ -209,6 +211,8 @@ body {
 
 .label {
     color: $darkslategray2;
+    font-size: 12px;
+    font-weight: 400;
 }
 
 // Transact

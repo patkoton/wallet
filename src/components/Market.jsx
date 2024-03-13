@@ -16,34 +16,95 @@ const Market = () => {
   {
     name: 'Page A',
     value: 1000,
-    
+    day: 200,
+    week: 400,
+    month: 800,
+    year: 900,   
   },
   {
     name: 'Page B',
     value: 2200,
-    
+    day: 300,
+    week: 600,
+    month: 1000,
+    year: 2000,  
   },
   {
     name: 'Page C',
     value: 2300,
+    day: 300,
+    week: 500,
+    month: 1000,
+    year: 2100,  
   },
   {
     name: 'Page D',
     value: 2800,
+    day: 400,
+    week: 600,
+    month: 1000,
+    year: 2600,  
   },
   {
     name: 'Page E',
     value: 3800,
+    day: 500,
+    week: 1000,
+    month: 2000,
+    year: 2500,  
   },
   {
     name: 'Page F',
     value: 3500,
+    day: 400,
+    week: 700,
+    month: 1500,
+    year: 2700,  
   },
   {
     name: 'Page G',
     value: 3600,
+    day: 600,
+    week: 1000,
+    month: 2000,
+    year: 3500,  
   },
 ];
+
+  const [selectedOption, setSelectedOption] = useState('week');
+
+  const handleOptionChange = (option) => {
+    setSelectedOption(option);
+  };
+
+  const renderContent = () => {
+  if (selectedOption === 'day') {
+    return data[0].day;
+  } else if (selectedOption === 'week') {
+    return data[0].week;
+  } else if (selectedOption === 'month') {
+    return data[0].month;
+  } else if (selectedOption === 'year') {
+    return data[0].year;
+  } else {
+    return data[0].value;
+  }
+};
+
+const renderContent2 = () => {
+  if (selectedOption === 'day') {
+    return data[6].day;
+  } else if (selectedOption === 'week') {
+    return data[6].week;
+  } else if (selectedOption === 'month') {
+    return data[6].month;
+  } else if (selectedOption === 'year') {
+    return data[6].year;
+  } else {
+    return data[6].value;
+  }
+};
+
 
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
@@ -94,10 +155,10 @@ const CustomTooltip = ({ active, payload }) => {
       <div>
         {isExpanded && (
           <div className="extra-info">
-            <button className='btn-toogle'>Day</button>
-            <button className='btn-toogle'>Week</button>
-            <button className='btn-toogle'>Month</button>
-            <button className='btn-toogle'>Year</button>
+            <button className='btn-toogle' onClick={() => handleOptionChange('day')}>Day</button>
+            <button className='btn-toogle' onClick={() => handleOptionChange('week')}>Week</button>
+            <button className='btn-toogle' onClick={() => handleOptionChange('month')}>Month</button>
+            <button className='btn-toogle' onClick={() => handleOptionChange('year')}>Year</button>
           </div>
         )}
     </div>
@@ -107,11 +168,11 @@ const CustomTooltip = ({ active, payload }) => {
           <div className='top-chart'>
             <div className='diff-div'>
               <div className='micro'></div>
-              <p className='diff-text'>Lower: ${data[0].value}</p>
+              <p className='diff-text'>Lower: ${renderContent()}</p>
             </div>
             <div className='diff-div'>
               <div className='micro2'></div>
-              <p className='diff-text'>Higher: ${data[6].value}</p>
+              <p className='diff-text'>Higher: ${renderContent2()}</p>
             </div>
           </div>
           <div className='chart-div'>
@@ -134,18 +195,8 @@ const CustomTooltip = ({ active, payload }) => {
                 strokeWidth={0.0}
                 strokeDasharray="3 3"
               >
-                <text
-                  x={10}
-                  y={10}
-                  dy={-8}
-                  textAnchor="start"
-                  fill="#5b0b0b"
-                  fontSize={12}
-                >
-                  1BTC=$5.483
-                </text>
+              <Label value="1BTC=$5.483" position="insideBottom" contentStyle={{ fill: '#323231' }} offset={-5} />
               </CartesianGrid>
-              <Label value="1BTC=$5.483" position="bottom" />
             </AreaChart>
           </div>
     </div>
